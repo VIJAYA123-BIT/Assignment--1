@@ -1,11 +1,8 @@
 import random
-no_of_persons=int(input())
-
-cost_of_ticket=int(input())
-total=no_of_persons*cost_of_ticket
+no_of_persons=int(input("enter participant :"))
 l=[]
 for i in range(no_of_persons):
-    l.append(input())
+    l.append(str(input()))
 # l=['rani','raju','sean','clare','harry','walker','taylor','siva','rax','priya']
-pr=random.choice(l)
-print("the lottery winner is %s and the lottery that the participant won was:%d"%(pr,total))
+pr=random.randint(0,no_of_persons-1)
+print("lottery winner is :",l[pr])
